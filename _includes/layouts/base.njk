@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    {% include "head.njk" %}
+</head>
+<body>
+    <header class="sidebar">
+        <div class="row">
+            <div class="me">
+                <a aria-label="home" href="/">
+                    <img width="128" src="https://gravatar.com/avatar/343a416fd183746c03fa7c2cd750cf15?size=256&cache=1729188961042" alt="prettiest human in the world">
+                </a>
+            </div>
+        </div>
+
+        <div class="row identity">
+            <div class="title">
+                <a aria-label="home" href="/">{{ site.title }}</a>
+            </div>
+            <div class="desc">
+                {{ site.desc }}
+            </div>
+        </div>
+
+        <nav class="row navigation">
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+        </nav>
+
+        <ul role="list" class="row social-links">
+            <li><a href="">{% icon "custom:github-o", width="24px" %}</a></li>
+        </ul>
+    </header>
+    <main id="main">
+        {{ content | safe }}
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "11ty-me",
+  "version": "1.0.0",
+  "description": "A simple project to quicklauch my blog for netflify",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5"
+  },
+  "devDependencies": {
+    "eleventy-plugin-icons": "^4.5.1",
+    "eleventy-plugin-page-assets": "^0.3.0",
+    "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.2.0",
+    "markdown-it-footnote": "^4.0.0"
+  }
+}

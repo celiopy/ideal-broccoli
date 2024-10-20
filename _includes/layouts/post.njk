@@ -1,0 +1,14 @@
+---
+layout: layouts/base
+---
+
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+        <span>Filled under {{ tags[0] }}</span> |
+        <time datetime="{{ page.date }}">On {{ page.date | readableDate("LLL dd, yyyy") }}</time>
+    </header>
+    <div>
+        {{ content | safe }}
+    </div>
+</article>

@@ -1,0 +1,38 @@
+{% set metatitle = site.title %}
+
+{% if title %}
+    {% set metatitle = title ~ " • " ~ metatitle %}
+{% endif %}
+
+{% set metadesc = site.desc %}
+{% if desc %}
+    {% set metadesc = desc %}
+{% endif %}
+
+{% set metatype = "website" %}
+{% if type %}
+    {% set metatype = type %}
+{% endif %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+<title>{{ metatitle | trim }}</title>
+
+<meta name="description" content="{{ metadesc | trim }}">
+
+<meta property="og:title" content="{{ metatitle | trim }}">
+<meta property="og:type" content="{{ metatype | trim }}">
+<meta property="og:url" content="{{ site.baseurl ~ page.url }}">
+<meta property="og:image" content="/assets/avatar.png">
+<meta property="og:description" content="{{ metadesc | trim }}">
+
+<link rel="canonical" href="{{ site.baseurl ~ page.url }}">
+
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+
+<link rel="stylesheet" href="/assets/style.css">
